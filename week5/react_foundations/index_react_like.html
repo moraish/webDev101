@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script>
+        let state = {
+            counter: 1
+        }
+
+    function onBtnClick() {
+        state.counter++;
+        button(state.counter);
+    }
+
+    function button(counter) {
+        const btn = document.createElement("button");
+        btn.innerHTML = "Counter " + counter;
+        btn.setAttribute("onclick", "onBtnClick()");
+        btn.setAttribute("id", "btn");
+        console.log(btn);
+        console.log(counter);
+        const btnComponent = document.getElementById("root");
+        btnComponent.appendChild(btn);
+    }
+    
+    </script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root">
+        <script>
+            button(0);
+        </script>
+    </div>
+    
+</body>
+</html>

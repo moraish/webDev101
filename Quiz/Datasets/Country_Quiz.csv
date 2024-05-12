@@ -1,0 +1,195 @@
+id,country,continent,capital
+0,Afghanistan,Asia,Kabul
+1,Albania,Europe,Tirana
+2,Algeria,Africa,Algiers
+3,Andorra,Europe,Andorra la Vella
+4,Angola,Africa,Luanda
+5,Antigua and Barbuda,North America,Saint John's
+6,Argentina,South America,Buenos Aires
+7,Armenia,Asia,Yerevan
+8,Australia,Oceania,Canberra
+9,Austria,Europe,Vienna
+10,Azerbaijan,Asia,Baku
+11,Bahamas,North America,Nassau
+12,Bahrain,Asia,Manama
+13,Bangladesh,Asia,Dhaka
+14,Barbados,North America,Bridgetown
+15,Belarus,Europe,Minsk
+16,Belgium,Europe,Brussels
+17,Belize,North America,Belmopan
+18,Benin,Africa,Porto-Novo
+19,Bhutan,Asia,Thimphu
+20,Bolivia,South America,Sucre
+21,Bosnia and Herzegovina,Europe,Sarajevo
+22,Botswana,Africa,Gaborone
+23,Brazil,South America,Brasília
+24,Brunei,Asia,Bandar Seri Begawan
+25,Bulgaria,Europe,Sofia
+26,Burkina Faso,Africa,Ouagadougou
+27,Burundi,Africa,Gitega
+28,Cabo Verde,Africa,Praia
+29,Cambodia,Asia,Phnom Penh
+30,Cameroon,Africa,Yaoundé
+31,Canada,North America,Ottawa
+32,Central African Republic,Africa,Bangui
+33,Chad,Africa,N'Djamena
+34,Chile,South America,Santiago
+35,China,Asia,Beijing
+36,Colombia,South America,Bogotá
+37,Comoros,Africa,Moroni
+38,Congo (Congo-Brazzaville),Africa,Brazzaville
+39,Costa Rica,North America,San José
+40,Croatia,Europe,Zagreb
+41,Cuba,North America,Havana
+42,Cyprus,Asia,Nicosia
+43,Czechia (Czech Republic),Europe,Prague
+44,Democratic Republic of the Congo,Africa,Kinshasa
+45,Denmark,Europe,Copenhagen
+46,Djibouti,Africa,Djibouti City
+47,Dominica,North America,Roseau
+48,Dominican Republic,North America,Santo Domingo
+49,Ecuador,South America,Quito
+50,Egypt,Africa,Cairo
+51,El Salvador,North America,San Salvador
+52,Equatorial Guinea,Africa,Malabo
+53,Eritrea,Africa,Asmara
+54,Estonia,Europe,Tallinn
+55,Eswatini (fmr. Swaziland),Africa,Mbabane
+56,Ethiopia,Africa,Addis Ababa
+57,Fiji,Oceania,Suva
+58,Finland,Europe,Helsinki
+59,France,Europe,Paris
+60,Gabon,Africa,Libreville
+61,Gambia,Africa,Banjul
+62,Georgia,Asia,Tbilisi
+63,Germany,Europe,Berlin
+64,Ghana,Africa,Accra
+65,Greece,Europe,Athens
+66,Grenada,North America,St. George's
+67,Guatemala,North America,Guatemala City
+68,Guinea,Africa,Conakry
+69,Guinea-Bissau,Africa,Bissau
+70,Guyana,South America,Georgetown
+71,Haiti,North America,Port-au-Prince
+72,Holy See,Europe,Vatican City
+73,Honduras,North America,Tegucigalpa
+74,Hungary,Europe,Budapest
+75,Iceland,Europe,Reykjavik
+76,India,Asia,New Delhi
+77,Indonesia,Asia,Jakarta
+78,Iran,Asia,Tehran
+79,Iraq,Asia,Baghdad
+80,Ireland,Europe,Dublin
+81,Israel,Asia,Jerusalem
+82,Italy,Europe,Rome
+83,Jamaica,North America,Kingston
+84,Japan,Asia,Tokyo
+85,Jordan,Asia,Amman
+86,Kazakhstan,Asia,Nur-Sultan
+87,Kenya,Africa,Nairobi
+88,Kiribati,Oceania,South Tarawa
+89,Kuwait,Asia,Kuwait City
+90,Kyrgyzstan,Asia,Bishkek
+91,Laos,Asia,Vientiane
+92,Latvia,Europe,Riga
+93,Lebanon,Asia,Beirut
+94,Lesotho,Africa,Maseru
+95,Liberia,Africa,Monrovia
+96,Libya,Africa,Tripoli
+97,Liechtenstein,Europe,Vaduz
+98,Lithuania,Europe,Vilnius
+99,Luxembourg,Europe,Luxembourg City
+100,Madagascar,Africa,Antananarivo
+101,Malawi,Africa,Lilongwe
+102,Malaysia,Asia,Kuala Lumpur
+103,Maldives,Asia,Male
+104,Mali,Africa,Bamako
+105,Malta,Europe,Valletta
+106,Marshall Islands,Oceania,Majuro
+107,Mauritania,Africa,Nouakchott
+108,Mauritius,Africa,Port Louis
+109,Mexico,North America,Mexico City
+110,Micronesia,Oceania,Palikir
+111,Moldova,Europe,Chisinau
+112,Monaco,Europe,Monaco
+113,Mongolia,Asia,Ulaanbaatar
+114,Montenegro,Europe,Podgorica
+115,Morocco,Africa,Rabat
+116,Mozambique,Africa,Maputo
+117,Myanmar (formerly Burma),Asia,Naypyidaw
+118,Namibia,Africa,Windhoek
+119,Nauru,Oceania,Yaren
+120,Nepal,Asia,Kathmandu
+121,Netherlands,Europe,Amsterdam
+122,New Zealand,Oceania,Wellington
+123,Nicaragua,North America,Managua
+124,Niger,Africa,Niamey
+125,Nigeria,Africa,Abuja
+126,North Korea,Asia,Pyongyang
+127,North Macedonia,Europe,Skopje
+128,Norway,Europe,Oslo
+129,Oman,Asia,Muscat
+130,Pakistan,Asia,Islamabad
+131,Palau,Oceania,Ngerulmud
+132,Palestine State,Asia,Ramallah
+133,Panama,North America,Panama City
+134,Papua New Guinea,Oceania,Port Moresby
+135,Paraguay,South America,Asunción
+136,Peru,South America,Lima
+137,Philippines,Asia,Manila
+138,Poland,Europe,Warsaw
+139,Portugal,Europe,Lisbon
+140,Qatar,Asia,Doha
+141,Romania,Europe,Bucharest
+142,Russia,Europe,Moscow
+143,Rwanda,Africa,Kigali
+144,Saint Kitts and Nevis,North America,Basseterre
+145,Saint Lucia,North America,Castries
+146,Saint Vincent and the Grenadines,North America,Kingstown
+147,Samoa,Oceania,Apia
+148,San Marino,Europe,San Marino
+149,Sao Tome and Principe,Africa,Sao Tome
+150,Saudi Arabia,Asia,Riyadh
+151,Senegal,Africa,Dakar
+152,Serbia,Europe,Belgrade
+153,Seychelles,Africa,Victoria
+154,Sierra Leone,Africa,Freetown
+155,Singapore,Asia,Singapore
+156,Slovakia,Europe,Bratislava
+157,Slovenia,Europe,Ljubljana
+158,Solomon Islands,Oceania,Honiara
+159,Somalia,Africa,Mogadishu
+160,South Africa,Africa,Pretoria
+161,South Korea,Asia,Seoul
+162,South Sudan,Africa,Juba
+163,Spain,Europe,Madrid
+164,Sri Lanka,Asia,Colombo
+165,Sudan,Africa,Khartoum
+166,Suriname,South America,Paramaribo
+167,Sweden,Europe,Stockholm
+168,Switzerland,Europe,Bern
+169,Syria,Asia,Damascus
+170,Tajikistan,Asia,Dushanbe
+171,Tanzania,Africa,Dodoma
+172,Thailand,Asia,Bangkok
+173,Timor-Leste,Asia,Dili
+174,Togo,Africa,Lomé
+175,Tonga,Oceania,Nuku'alofa
+176,Trinidad and Tobago,North America,Port of Spain
+177,Tunisia,Africa,Tunis
+178,Turkey,Asia,Ankara
+179,Turkmenistan,Asia,Ashgabat
+180,Tuvalu,Oceania,Funafuti
+181,Uganda,Africa,Kampala
+182,Ukraine,Europe,Kyiv
+183,United Arab Emirates,Asia,Abu Dhabi
+184,United Kingdom,Europe,London
+185,United States of America,North America,"Washington, D.C."
+186,Uruguay,South America,Montevideo
+187,Uzbekistan,Asia,Tashkent
+188,Vanuatu,Oceania,Port Vila
+189,Venezuela,South America,Caracas
+190,Vietnam,Asia,Hanoi
+191,Yemen,Asia,Sana'a
+192,Zambia,Africa,Lusaka
+193,Zimbabwe,Africa,Harare

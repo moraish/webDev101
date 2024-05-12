@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script>
+        function increment() {
+            const button = document.getElementById('btn');
+            const currentValue = button.innerHTML;
+            let counter = currentValue.split(' ')[1];
+            counter = parseInt(counter) + 1;
+            button.innerHTML = "Counter " + counter;
+        }
+    </script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="increment()" id = 'btn'>Counter 1</button>
+</body>
+</html>

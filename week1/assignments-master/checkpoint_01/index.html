@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const request = new XMLHttpRequest();
+        request.addEventListener('readystatechange', () => {
+            if(request.readyState === 4 && request.status === 200) {
+                console.log(request, request.responseText);
+            }
+            else {
+                console.log("Could not fetch the data.")
+            }
+        })
+        request.open('GET', 'https://jsonplaceholder.typicode.com/todoss/');
+        request.send();
+    </script>
+</body>
+</html>
