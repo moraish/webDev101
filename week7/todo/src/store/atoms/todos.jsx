@@ -7,3 +7,13 @@ export const todoAtom = atom({
         "desc" : "Sample description"
     }]
 })
+
+
+export const toDoTitleAtom = atom({
+    key: "toDoTitle",
+    default: ""
+})
+export const toDoDescAtom = atom({
+    key: "toDoDesc",
+    default: ""
+})
