@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { RecoilRoot, useRecoilValue, useSetRecoilState } from 'recoil'
-import { todoAtom, toDoTitleAtom, toDoDescAtom } from './store/atoms/todos'
+import { todoAtom, toDoTitleAtom, toDoDescAtom, todoFilterState } from './store/atoms/todos'
 
 function App() {
   
@@ -12,6 +12,7 @@ function App() {
       <RecoilRoot>
         <AddTodo />
         <DisplayTodos />
+        <Filter />
       </RecoilRoot>
 
     </>
@@ -75,6 +76,33 @@ function DisplayTodos() {
   )
 }
 
+
+function Filter() {
+
+  const setFilter = useSetRecoilState(todoFilterState);
+  const getFilterValue = useRecoilValue(todoFilterState);
+  const filteredTodos = useRecoilValue(filterSelector);
+
+  function setFilter(event) {
+    
+    setFilter(event.target.value);
+    console.log(getFilterValue);
+  }
+
+  function displayFilter() {
+    
+    console.log(filteredTodos);
+
+  }
+
+  return (
+    <>
+      <input type='text' placeholder='Filter condition' onChange={setFilter} />
+      <button onClick={displayFilter}>Filter ToDos</button>
+
+    </>
+  )
+}
 
 
 export default App
