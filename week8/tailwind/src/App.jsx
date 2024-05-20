@@ -1,8 +1,10 @@
 function App() {
   return (
     <>
-      <Flex />
+      {/* <Flex />
       <Grid />
+      <Responsive /> */}
+      <Problem />
     </>
   )
 }
@@ -43,10 +45,28 @@ function Grid() {
 }
 
 
+// Mobile first means - whatever your write without prefix is for mobile, if you want it for something else, use a prefix.
+
 function Responsive() {
   return (
     <>
+      <div className="bg-red-500 md:bg-blue-500">
+        Hi There!
+      </div>
     
+    </>
+  )
+}
+
+
+function Problem() {
+  return (
+    <>
+      <div className="grid grid-cols-1 sm:grid-cols-3">
+        <div className="bg-red-500">1</div>
+        <div className="bg-blue-500">2</div>
+        <div className="bg-green-500">3</div>
+      </div>
     </>
   )
 }
