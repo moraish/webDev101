@@ -1,6 +1,8 @@
 export const RevenueCard = ({title, amount, orderCount}) => {
     return (
-    <div className="bg-white rounded shadow p-4">
+    <div className="bg-white rounded shadow p-4" style={{
+        margin:"10%"
+    }}>
         <div className="flex text-gray-500">
             {title} 
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
@@ -8,7 +10,7 @@ export const RevenueCard = ({title, amount, orderCount}) => {
             </svg>
 
         </div>
-        <div className="flex justify-between">
+        <div className="grid grid-cols-1 sm:grid-cols-3">
             <div>{amount}</div>
             {orderCount ? <div className="flex text-blue-700">{orderCount} order(s) 
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
