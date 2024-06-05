@@ -1,10 +1,17 @@
 import { useState, useEffect } from 'react'
 import React from 'react';
 import './App.css'
+import { useIsOnline } from './hooks/useIsOnline';
+import { useCountdown } from './hooks/useCountdown';
 
 function App() {
 
   const [render, setRender] = useState(true);
+
+  const isOnline = useIsOnline();
+  console.log("User is online -> ", isOnline);
+
+  let countdown = useCountdown(20);
 
   useEffect(() => {
     setInterval(() => {
@@ -13,9 +20,14 @@ function App() {
   }, []);
 
 
+
+
+
   return (
     <>
-      {render ? <MyComponent></MyComponent> : <div> </div>}      
+      {render ? <MyComponent></MyComponent> : <div> </div>}
+      {"Time remaining is -> "}
+      {countdown}
     </>
   )
 }
