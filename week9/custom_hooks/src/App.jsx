@@ -20,9 +20,6 @@ function App() {
   }, []);
 
 
-
-
-
   return (
     <>
       {render ? <MyComponent></MyComponent> : <div> </div>}
