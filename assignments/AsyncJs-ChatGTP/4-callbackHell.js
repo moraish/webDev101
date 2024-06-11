@@ -7,9 +7,9 @@
 
 const fs = require('fs');
 
-function read(callback) {
+function read(path, callback) {
     // Function to read the file
-    fs.readFile('number.txt', 'utf-8', (err, data) => {
+    fs.readFile(path, 'utf-8', (err, data) => {
         if (err) {
             console.error("File not read!");
         }
@@ -42,7 +42,7 @@ function display(data) {
 }
 
 // callback hell
-read((data) => {
+read('number.txt', (data) => {
     convert(data, (data) => {
         multiply(data, (data) => {
             display(data);
