@@ -4,8 +4,8 @@ compatibility_date = "2025-01-30"
 
 # compatibility_flags = [ "nodejs_compat" ]
 
-# [vars]
-DATABASE_URL = "prisma://accelerate.prisma-data.net/?api_key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlfa2V5IjoiZDBkNzE0NGUtNzQ4Ni00ODM2LWEyOGUtYmUxMDI0ZWI2ZDczIiwidGVuYW50X2lkIjoiZWNmMTFjNWU2NmFkNDcyYzg0ZmY3MmMxMzE2NmZiMzMxYzU4MDRlODM0MDAyZDFiNzEyNjhmMzM2MTZkNjk5YSIsImludGVybmFsX3NlY3JldCI6IjU4ODk3ODczLWRmMWEtNGVhMi04MDk5LTMxNTkxZDA0YjEyMiJ9.hz8CTjCPyGubtR0Qcu9UcUA0ATrumVOipr8BulHY5Co"
+[vars]
+DATABASE_URL = "prisma://accelerate.prisma-data.net/?api_key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlfa2V5IjoiYjExMDE1NWItZjJhOC00NjZkLTg2YjctYjBjMWY5OThkYTQ3IiwidGVuYW50X2lkIjoiZWNmMTFjNWU2NmFkNDcyYzg0ZmY3MmMxMzE2NmZiMzMxYzU4MDRlODM0MDAyZDFiNzEyNjhmMzM2MTZkNjk5YSIsImludGVybmFsX3NlY3JldCI6IjU4ODk3ODczLWRmMWEtNGVhMi04MDk5LTMxNTkxZDA0YjEyMiJ9.fSl6PWfdNnXbmFDWQyTZ7V7-A2PrHkek81EuETjJPd8"
 
 # MY_VAR = "my-variable"
 
