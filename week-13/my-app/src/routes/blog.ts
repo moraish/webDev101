@@ -14,12 +14,14 @@ export const blogRouter = new Hono<{
     }
 }>();
 
+// MIDDLEWARE TO CHECK IF USER IS LOGGED IN
 blogRouter.use("/*", async (c, next) => {
     const authHeader = c.req.header("authorization") || "";
     const user = await verify(authHeader, c.env.JET_SECRET);
     if (user) {
         c.set("userId", user.id as string);
-        next();
+        console.log(user);
+        await next();
     }
     else {
         c.status(403);
@@ -29,6 +31,7 @@ blogRouter.use("/*", async (c, next) => {
     }
 })
 
+// POST A BLOG
 blogRouter.post('/', async (c) => {
 
     const body = await c.req.json();
@@ -52,7 +55,7 @@ blogRouter.post('/', async (c) => {
 
 })
 
-
+// UPDATE A BLOG
 blogRouter.put('/', async (c) => {
     const body = await c.req.json();
 
@@ -75,29 +78,7 @@ blogRouter.put('/', async (c) => {
     })
 })
 
-blogRouter.get('/', async (c) => {
-    const body = await c.req.json();
-    const prisma = new PrismaClient({
-        datasourceUrl: c.env.DATABASE_URL
-    }).$extends(withAccelerate())
-
-    try {
-        const blog = prisma.blog.findFirst({
-            where: {
-                id: body.id
-            }
-        })
-        return c.json({
-            blog
-        })
-    } catch (e) {
-        console.log(e);
-        return c.json({
-            message: "failed to return blog"
-        })
-    }
-})
-
+// GET ALL BLOGS
 // ToDo: add pagination
 blogRouter.get('/bulk', async (c) => {
     const prisma = new PrismaClient({
@@ -111,13 +92,33 @@ blogRouter.get('/bulk', async (c) => {
 
 })
 
+// GET BLOG WITH A PARTICULAR ID
+blogRouter.get('/:id', async (c) => {
+    const id = c.req.param('id');
+    const prisma = new PrismaClient({
+        datasourceUrl: c.env.DATABASE_URL
+    }).$extends(withAccelerate())
+
+    try {
+        const blog = await prisma.blog.findFirst({
+            select: {
+                authorId: true,
+                title: true,
+                content: true
+            },
+            where: {
+                id: Number(id)
+            }
+        })
+        return c.json({
+            blog
+        })
+    } catch (e) {
+        console.log(e);
+        return c.json({
+            message: "failed to return blog"
+        })
+    }
+})
 
 
-// model Blog {
-//     id        Int     @id @default(autoincrement())
-//     authorId  Int
-//     title     String
-//     content   String
-//     published Boolean @default(false)
-//     author    User    @relation(fields: [authorId], references: [id])
-//   }
