@@ -2,6 +2,7 @@ import { Hono } from "hono";
 import { PrismaClient } from '@prisma/client/edge'
 import { withAccelerate } from '@prisma/extension-accelerate'
 import { decode, sign, verify } from 'hono/jwt'
+import { signinInput, signupInput } from "@moraish/medium-common";
 
 
 
@@ -16,13 +17,20 @@ export const userRouter = new Hono<{
 userRouter.post('/signup', async (c) => {
 
     const body = await c.req.json();
+    // input validation
+    const { success } = signupInput.safeParse(body);
+    if (!success) {
+        c.status(411);
+        return c.json({
+            message: "inputs not correct"
+        })
+    }
 
     const prisma = new PrismaClient({
         datasourceUrl: c.env.DATABASE_URL,
     }).$extends(withAccelerate())
 
-    // needs to add 1. ZOD
-    // 2. Password enctyption
+    // 2. Needs Password enctyption
     try {
 
         const user = await prisma.user.create({
@@ -49,6 +57,15 @@ userRouter.post('/signup', async (c) => {
 
 userRouter.post('/signin', async (c) => {
     const body = await c.req.json();
+    const { success } = signinInput.safeParse(body);
+    if (!success) {
+        c.status(411);
+        return c.json({
+            message: "incorrect inputs"
+        })
+    }
+
+
     console.log(body);
     const prisma = new PrismaClient({
         datasourceUrl: c.env.DATABASE_URL,
