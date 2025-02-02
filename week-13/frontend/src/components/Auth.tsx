@@ -1,6 +1,8 @@
 import { SignupInput } from "@moraish/medium-common";
+import axios from "axios";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { BACKEND_URL } from "../config";
 
 function Auth({ type }: { type: "signup" | "signin" }) {
 
@@ -10,6 +12,29 @@ function Auth({ type }: { type: "signup" | "signin" }) {
         username: "",
         password: ""
     });
+
+    const navigate = useNavigate()
+
+    async function sendRequest() {
+        const endpoint = BACKEND_URL + (type === 'signup' ? '/api/v1/user/signup' : '/api/v1/user/signin');
+
+        try {
+            const response = await axios.post(endpoint, postInputs, {
+                headers: {
+                    'Content-Length': '0'
+                }
+            });
+
+            const jwt = response.data;
+            localStorage.setItem("token", jwt);
+            navigate('/blogs');
+        } catch (e) {
+            console.log(e);
+        }
+
+
+
+    }
 
     return (
         <div className="h-screen flex justify-center items-center flex-col p-10 ">
@@ -21,24 +46,26 @@ function Auth({ type }: { type: "signup" | "signin" }) {
                 {type === 'signup' ? "Already have an account?" : "Don't have an account?"} {type === 'signup' ? <Link to="/signin" className="underline pl-2">Login</Link> : <Link to="/signup" className="underline pl-2">Signup</Link>}
             </div>
 
-            <div className="pt-10 w-3/5">
+            {type === 'signup' ? <div className="pt-10 w-3/5">
                 <LabelledInput label="First Name" placeholder="Moraish" onchange={(e) => {
                     setpostInputs({
                         ...postInputs,
                         firstName: e.target.value
                     })
                 }} />
-            </div>
+            </div> : null}
+
+            {type === 'signup' ?
+                <div className="pt-6 w-3/5">
+                    <LabelledInput label="Last Name" placeholder="Kapoor" onchange={(e) => {
+                        setpostInputs({
+                            ...postInputs,
+                            lastName: e.target.value
+                        })
+                    }} />
+                </div> : null}
             <div className="pt-6 w-3/5">
-                <LabelledInput label="Last Name" placeholder="Kapoor" onchange={(e) => {
-                    setpostInputs({
-                        ...postInputs,
-                        lastName: e.target.value
-                    })
-                }} />
-            </div>
-            <div className="pt-6 w-3/5">
-                <LabelledInput label="Username / Email ID" placeholder="mkapoor" onchange={(e) => {
+                <LabelledInput label="Username" placeholder="mkapoor" onchange={(e) => {
                     setpostInputs({
                         ...postInputs,
                         username: e.target.value
@@ -54,7 +81,7 @@ function Auth({ type }: { type: "signup" | "signin" }) {
                 }} />
             </div>
             <div className="pt-3 w-3/5">
-                <button className="w-full h-12 px-6 text-white transition-colors duration-150 bg-black rounded-lg focus:shadow-outline hover:bg-indigo-800">
+                <button onClick={sendRequest} className="w-full h-12 px-6 text-white transition-colors duration-150 bg-black rounded-lg focus:shadow-outline hover:bg-indigo-800">
                     Signup
                 </button>
             </div>
