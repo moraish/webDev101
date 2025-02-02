@@ -1,7 +1,17 @@
+import Quote from "../components/Quote";
+import SignUpForm from "../components/SignUpForm";
+
 function Signup() {
     return (
         <>
-            Signup
+            <div className="grid grid-cols-2">
+                <div>
+                    <SignUpForm />
+                </div>
+                <div className="invisible lg:visible">
+                    <Quote />
+                </div>
+            </div>
         </>
     )
 }
