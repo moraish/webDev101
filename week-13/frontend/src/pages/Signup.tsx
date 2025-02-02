@@ -5,7 +5,7 @@ function Signup() {
     return (
         <>
             <div className="grid grid-cols-2">
-                <div>
+                <div className="w-full">
                     <SignUpForm />
                 </div>
                 <div className="invisible lg:visible">
