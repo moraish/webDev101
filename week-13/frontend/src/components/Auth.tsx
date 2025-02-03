@@ -25,6 +25,7 @@ function Auth({ type }: { type: "signup" | "signin" }) {
                 }
             });
 
+
             const jwt = response.data;
             localStorage.setItem("token", jwt);
             navigate('/blogs');
@@ -82,7 +83,7 @@ function Auth({ type }: { type: "signup" | "signin" }) {
             </div>
             <div className="pt-3 w-3/5">
                 <button onClick={sendRequest} className="w-full h-12 px-6 text-white transition-colors duration-150 bg-black rounded-lg focus:shadow-outline hover:bg-indigo-800">
-                    Signup
+                    {type === 'signup' ? 'Sign up' : 'Sign in'}
                 </button>
             </div>
         </div>
