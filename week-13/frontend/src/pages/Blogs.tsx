@@ -13,14 +13,16 @@ function Blogs() {
     return (
         <div>
             <AppBar />
-            <div className="flex justify-center">
-                <div>
-                    <BlogCard
-                        authorName="Moraish Kapoor"
-                        publishedDate="2nd Feb 2025"
-                        title="How an Ugly Single-Page Website makes $5,000 a month with Affiliate Marketing"
-                        content="How an Ugly Single-Page Website makes $5,000 a month with Affiliate Marketing How an Ugly Single-Page Website makes $5,000 a month with Affiliate Marketing How an Ugly Single-Page Website makes $5,000 a month with Affiliate Marketing How an Ugly Single-Page Website makes $5,000 a month with Affiliate Marketing How an Ugly Single-Page Website makes $5,000 a month with Affiliate Marketing"
-                    />
+            <div className="flex justify-center ">
+                <div className="min-w-full md:min-w-[75vw]">
+                    {
+                        blogs.map(blog => <BlogCard
+                            authorName={blog.author.firstName || "Anonymous"}
+                            publishedDate="2nd Feb 2025"
+                            title={blog.title}
+                            content={blog.content}
+                        />)
+                    }
                 </div>
             </div>
         </div>
