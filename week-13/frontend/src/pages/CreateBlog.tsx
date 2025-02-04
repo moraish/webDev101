@@ -1,9 +1,13 @@
 import { ChangeEvent, useState } from "react";
 import AppBar from "../components/AppBar"
+import axios from "axios";
+import { BACKEND_URL } from "../config";
+import { useNavigate } from "react-router-dom";
 
 export const CreateBlog = () => {
     const [title, setTitle] = useState("");
     const [content, setContent] = useState("");
+    const navigate = useNavigate();
     return (
         <div>
             <AppBar />
@@ -20,8 +24,16 @@ export const CreateBlog = () => {
                 </textarea>
 
 
-                <button onClick={() => {
-                    console.log(title, content)
+                <button onClick={async () => {
+                    const response = await axios.post(BACKEND_URL + '/api/v1/blog', { title, content }, {
+                        headers: {
+                            'Authorization': localStorage.getItem('token'),
+                            'Content-Length': '0'
+                        }
+                    })
+                    navigate('/blog/' + response.data.id);
+
+
                 }} type="submit" className="mt-4 inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-green-500 rounded-lg hover:bg-green-600">
                     Publish
                 </button>
