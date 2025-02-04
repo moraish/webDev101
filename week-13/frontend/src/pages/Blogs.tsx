@@ -1,7 +1,7 @@
 
 import AppBar from "../components/AppBar";
 import { BlogCard } from "../components/BlogCard";
-import useBlogs from "../hooks/useBlogs";
+import { useBlogs } from "../hooks/useBlogs";
 
 
 
@@ -21,6 +21,7 @@ function Blogs() {
                             publishedDate="2nd Feb 2025"
                             title={blog.title}
                             content={blog.content}
+                            id={blog.id}
                         />)
                     }
                 </div>

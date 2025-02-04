@@ -134,7 +134,13 @@ blogRouter.get('/:id', async (c) => {
             select: {
                 authorId: true,
                 title: true,
-                content: true
+                content: true,
+                author: {
+                    select: {
+                        firstName: true,
+                        lastName: true,
+                    }
+                }
             },
             where: {
                 id: Number(id)
