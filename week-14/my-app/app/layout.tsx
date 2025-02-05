@@ -27,8 +27,18 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <AppBar />
         {children}
       </body>
     </html>
   );
+}
+
+function AppBar() {
+  return (
+    <div className="p-5 border-b">
+      Blogging
+
+    </div>
+  )
 }
