@@ -1,23 +1,23 @@
 import { useBlog } from "@/hooks/useBlog";
 import axios from "axios";
 
-async function getblogDetails() {
-    const endpoint = 'https://my-app.moraish.workers.dev/api/v1/blog/3';
-    const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mjh9.0LL6UHAyTJEbOIoKBpdi4NsJ8oKwQsFPBXUXu9pmqw0';
+async function getBlogDetails() {
+    const endpoint = 'http://localhost:3000/api/user';
 
-    const response = await axios.get(endpoint, {
-        headers: {
-            Authorization: token,
-        }
-    })
+    const response = await axios.get(endpoint);
 
-    return response.data.blog;
+    await timeout(5000); // Wait for 5 seconds
+
+    return response.data;
+}
+
+function timeout(ms: number) {
+    return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 
-
 export default async function () {
-    const blogDetails = await getblogDetails();
+    const blogDetails = await getBlogDetails();
     return (<div>
         Hello
         {blogDetails.title}
