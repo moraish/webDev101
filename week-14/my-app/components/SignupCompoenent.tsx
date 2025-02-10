@@ -14,7 +14,6 @@ export default function SignupComponent() {
             username, password
         });
     }
-
     return (
         <div className="flex justify-center h-screen">
             <div className="flex flex-col justify-center">
